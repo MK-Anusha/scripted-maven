@@ -1,0 +1,14 @@
+node{
+    stage('fetching the code'){
+       git branch: 'main', url: 'https://github.com/MK-Anusha/declarative-pipe.git' 
+    }
+    stage('build'){
+        build 'maven job2'
+    }
+    stage('test1'){
+        echo "this is testing phoase"
+    }
+    stage('deploy'){
+        echo "this is deployment phase "
+    }
+}
